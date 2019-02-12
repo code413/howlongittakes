@@ -10,4 +10,19 @@ class Question extends Model
     {
         return $this->hasMany(Answer::class);
     }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
+    public function average()
+    {
+        $answers = [];
+        foreach ($this->answers->pluck('value') as $answer){
+            $answers[] =$answer;
+        }
+        $average = round( array_sum($answers) / count($answers));
+        return $average;
+    }
 }

@@ -8,7 +8,7 @@ $factory->define(App\Answer::class, function (Faker $faker) {
 
     return [
         'question_id'=>$faker->randomElement($question),
-        'value'=>$faker->randomNumber(),
+        'value'=>$faker->numberBetween($min=1, $max=200),
         'unit_id'=>$faker->randomElement($unit),
         'url'=>$faker->url,
         'approved'=>$faker->boolean(100),

@@ -8,11 +8,11 @@ class Answer extends Model
 {
     public function question()
     {
-        $this->belongsTo(Question::class);
+        return $this->belongsTo(Question::class);
     }
 
     public function unit()
     {
-        $this->belongsTo(Unit::class);
+        return $this->belongsTo(Unit::class);
     }
 }

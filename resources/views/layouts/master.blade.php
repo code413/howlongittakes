@@ -15,7 +15,7 @@
     @include('partials.header')
 @show
 
-<main class="@yield('main-class')">
+<main class="@yield('main-class', 'container')">
     @section('content')
 
     @show

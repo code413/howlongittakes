@@ -19,8 +19,8 @@ class CreateAnswersTable extends Migration
             $table->string('value');
             $table->integer('unit_id')->unsigned();
             $table->string('url');
-            $table->boolean('approved');
-            $table->boolean('discovered');
+            $table->boolean('approved')->default(0);
+            $table->boolean('discovered')->default(0);
 
             $table->foreign('question_id')->references('id')->on('questions');
             $table->foreign('unit_id')->references('id')->on('units');

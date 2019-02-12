@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('layouts.master');
-});
+Route::get('/', 'QuestionsController@index');
+Route::resource('questions', 'QuestionsController', ['only'=> ['show']]);
+Route::post('answers', 'AnswersController@store');
+
