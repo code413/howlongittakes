@@ -6,8 +6,8 @@
             </div>
 
             <div class="col-12 col-sm-6 text-center text-sm-right">
-                    <p>Copyright {{ date('Y') }} - A <a target="_blank" href="https://www.4thirteen.com.my">
-                            4 Thirteen Group Sdn Bhd</a> Product.</p>
+                    <p>Copyright {{ date('Y') }} - A <a target="_blank" href="https://www.code413.io">
+                            Code413</a> Product.</p>
             </div>
 
         </div>

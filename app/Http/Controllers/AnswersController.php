@@ -14,7 +14,7 @@ class AnswersController extends Controller
         $request->validate([
             'value' => 'required',
             'unit' => 'required',
-            'url' => 'required',
+            'url' => 'required|url',
         ]);
 
         $answer = new Answer;

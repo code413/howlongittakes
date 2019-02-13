@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'QuestionsController@index');
-Route::resource('questions', 'QuestionsController', ['only'=> ['show']]);
+/*Route::post('/', 'QuestionsController@store');*/
+Route::resource('to', 'QuestionsController', ['only'=> ['show', 'store']]);
 Route::post('answers', 'AnswersController@store');
 

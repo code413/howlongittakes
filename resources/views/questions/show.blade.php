@@ -2,7 +2,7 @@
 
 @section('content')
     <h1>
-        {{$question->content}}
+        How long it takes to {{$question->content}}
     </h1>
 
     @if($question->answers->count() > 0)
@@ -16,7 +16,7 @@
                 @if($answer->approved > 0)
 
                     <br>{{ $answer->value }} {{ $answer->unit->name }}
-                    <a href="{{ $answer->url }}">({{$answer->url}})</a>
+                    <a class="badge badge-secondary" href="{{ $answer->url }}">({{$answer->url}})</a>
                 @endif
             @endforeach
         </h3>

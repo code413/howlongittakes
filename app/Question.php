@@ -3,9 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Scout\Searchable;
 
 class Question extends Model
 {
+
+    use Searchable;
+
     public function answers()
     {
         return $this->hasMany(Answer::class);
