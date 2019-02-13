@@ -11,7 +11,15 @@ class QuestionsController extends Controller
 {
     public function index()
     {
-        $questions = Question::paginate(15);
+        $questions = Question::where('approved', 1)->paginate(15);
+        return view('questions.index', compact('questions'));
+    }
+
+    public function search(Request $request)
+    {
+
+        $questions = Question::search($request->search)->where('approved', 1)->paginate(15);
+
         return view('questions.index', compact('questions'));
     }
 
