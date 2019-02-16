@@ -12,18 +12,18 @@ class UnitsTableSeeder extends Seeder
     public function run()
     {
         $units = [
-            "Century",
-            "Day",
-            "Decade",
-            "Hour",
-            "Minute",
-            "Month",
-            "Season",
-            "Second",
-            "Semester",
-            "Solar cycle",
-            "Year",
-            "Week",
+            "century",
+            "day",
+            "decade",
+            "hour",
+            "minute",
+            "month",
+            "season",
+            "second",
+            "semester",
+            "solar cycle",
+            "year",
+            "week",
         ];
 
         foreach ($units as $unit){

@@ -12,10 +12,9 @@
 <body class="@yield('superclass')">
 
 @section('header')
-    @include('partials.header')
 @show
 
-<main class="@yield('main-class', 'container')">
+<main class="@yield('main.class')">
     @section('content')
 
     @show

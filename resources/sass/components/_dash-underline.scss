@@ -1,0 +1,9 @@
+.dash-underline
+{
+  border-bottom: dashed 0.1rem gray;
+  
+  &:hover
+  {
+    border-color:$primary;
+  }
+}

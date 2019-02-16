@@ -29,4 +29,8 @@ class Question extends Model
         $average = round( array_sum($answers) / count($answers));
         return $average;
     }
+    
+    public function isAnswered(){
+        return $this->answers->count() > 0;
+    }
 }

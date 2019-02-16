@@ -1,0 +1,22 @@
+.card-question
+{
+  transition:box-shadow .8s, border-color 0.2s;
+  box-shadow: 0 0 0 gray;
+
+  .card-body
+  {
+    padding:2rem;
+  }
+
+  &:hover
+  {
+    transition:0.2s;
+    border-color:$primary;
+    box-shadow: 0.4rem 0.4rem 0 blue;
+  }
+  
+  h2
+  {
+    font-size:2.5rem;
+  }
+}

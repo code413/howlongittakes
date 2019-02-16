@@ -1,35 +1,33 @@
 @extends('layouts.master')
 
+@section('main.class', 'd-flex p-5 flex-wrap flex-row')
+
+@section('header')
+    <input type="text" id="search" placeholder="How long it takes to..?">
+@stop
+
 @section('content')
-    <section class="questions">
-        <h1>How long it takes to ...</h1>
+        @foreach($questions as $question)
+            <div class="col-3">
+                <a href="{{  action('QuestionsController@show', ['question'=>$question->slug])  }}" class="question card card-question mb-5" style="min-height: 15rem;">
+                    <div class="card-body d-flex flex-column">
+                        <h2>@include('questions.partials.content')</h2>
+                        
+                        <div class="mt-auto text-right">
+                            @if($question->isAnswered())
+                                @include('answers.partials.short', ['answer' => $question->answers->first()])
+                            @else
+                                Answer now!
+                            @endif
+                        </div>
+                      
+                    </div>
+                </a>
+            </div>
+        @endforeach
+        
 
-        <form method="POST" action="{{ action('QuestionsController@search') }}">
-            @csrf
-            <input type="search" name="search" value="{{ request()->has('search') ? request()->get('search') : ''}}" placeholder="Search a keyword to find the question">
-        </form>
-
-        <ul>
-            @foreach($questions as $question)
-
-                <li class="d-flex align-items-center">
-                    <a href="{{ action('QuestionsController@show', ['question'=>$question->slug]) }}">
-                        <h2>{{$question->content}}</h2>
-                    </a>
-                    @if($question->answers->count() > 0)
-                        <h3>{{ $question->answers->first()->value }} {{ $question->answers->first()->unit->name }}</h3>
-                    @else
-                        <a href="{{ action('QuestionsController@show', ['question'=>$question->slug]) }}"
-                           class="badge badge-pill badge-primary">Answer it!</a>
-                    @endif
-                </li>
-
-            @endforeach
-        </ul>
-        {{ $questions->links() }}
-    </section>
-
-    <section class="question-submission">
+  {{--  <section class="question-submission">
         <form method="POST" action="{{ action('QuestionsController@store') }}">
             @csrf
             <label>Your question</label>
@@ -41,6 +39,6 @@
             @include('partials.messages')
 
         </form>
-    </section>
+    </section>--}}
 
 @stop
