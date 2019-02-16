@@ -13,12 +13,13 @@ body
 h1
 {
   font-family: $font-serif;
-  font-size:5rem;
+  font-size:3rem;
+  line-height: 1;
 }
 
 h2
 {
-  font-size:3rem;
+  font-size:2rem;
   font-weight: bold;
 }
 
@@ -35,4 +36,17 @@ h2
 .answer
 {
   font-family: $font-sans-serif;
+}
+
+@include media-breakpoint-up(md) {
+
+  h1
+  {
+    font-size:5rem;
+  }
+
+  h2
+  {
+    font-size:3rem;
+  }
 }

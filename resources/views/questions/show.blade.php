@@ -14,8 +14,8 @@
 @stop
 
 @section('content')
-    <div class="landing d-flex flex-column flex-grow justify-content-center align-items-center"
-         style="min-height:calc(100vh - 30rem); padding: 10rem 0;">
+    <div class="landing d-flex flex-column flex-grow justify-content-center align-items-center text-center"
+         style="min-height:calc(100vh - 30rem); padding: 10rem 2rem ;">
         <div class="align-items-center justify-content-center">
             <h1>
                 How long it takes to {{$question->content}}?
@@ -47,11 +47,11 @@
         <div class="container tab-content">
             <div id="references" class="tab-pane active" role="tabpanel">
                 @foreach($question->answers as $answer)
-                    <div class="row mb-2">
-                        <div class="col-6"><a href="{{ $answer->url }}"
+                    <div class="row mb-4 mb-md-2">
+                        <div class="col-12 col-md-6"><a href="{{ $answer->url }}"
                                               target="_blank">{{ str_limit($answer->url, 50) }}</a></div>
-                        <div class="col-3 text-primary">{{ $answer->value }} {{ $answer->unit->name }}s</div>
-                        <div class="col-3">Added 5 days ago</div>
+                        <div class="col-6 col-md-3 text-primary">{{ $answer->value }} {{ $answer->unit->name }}s</div>
+                        <small class="col-6 col-md-3 text-right text-muted">Added 5 days ago</small>
                     </div>
                 @endforeach
             </div>

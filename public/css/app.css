@@ -10681,11 +10681,12 @@ body {
 
 h1 {
   font-family: "Ovo", Serif;
-  font-size: 5rem;
+  font-size: 3rem;
+  line-height: 1;
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
@@ -10700,6 +10701,16 @@ h2 {
 
 .answer {
   font-family: "Quattrocento Sans", Sans-Serif;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
 }
 
 #search {
