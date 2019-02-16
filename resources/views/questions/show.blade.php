@@ -15,7 +15,7 @@
 
 @section('content')
     <div class="landing d-flex flex-column flex-grow justify-content-center align-items-center"
-         style="min-height:60rem">
+         style="min-height:calc(100vh - 30rem); padding: 10rem 0;">
         <div class="align-items-center justify-content-center">
             <h1>
                 How long it takes to {{$question->content}}?
