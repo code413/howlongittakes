@@ -7,11 +7,15 @@
 
     @if($question->answers->count() > 0)
         <h2>
-            Best answer:<br>It
-            takes {{ $question->answers->first()->value }} {{ $question->answers->first()->unit->name }}
+            Best answer:<br>It takes
+            @foreach($question->answers as $answer)
+                {{ ($answer->isBest ? $answer->value . ' ' . $answer->unit->name . '.' : '') }}
+                @endforeach
         </h2>
         <h3>
             Other answers:
+
+
             @foreach($question->answers as $answer)
                 @if($answer->approved > 0)
 
@@ -19,6 +23,28 @@
                     <a class="badge badge-secondary" href="{{ $answer->url }}">({{$answer->url}})</a>
                 @endif
             @endforeach
+
+            {{--Admin use only--}}
+            {{--@if(Auth::check() && Auth::user()->is_admin)
+                <hr>
+                Select the Best Answer:
+
+                <form method="POST" action="{{ action('AnswersController@update') }}">
+                    @csrf
+                    @method('PUT')
+                    @foreach($question->answers as $answer)
+                        @if($answer->approved > 0)
+                            <div>
+                                <input type="radio" name="best_answer"
+                                       value="{{ $answer->id }}">{{ $answer->value }} {{ $answer->unit->name }}
+                                <a class="badge badge-secondary" href="{{ $answer->url }}">({{$answer->url}})</a>
+                            </div>
+                        @endif
+                    @endforeach
+                    <input type="submit" value="Submit">
+                </form>
+                @endif--}}
+
         </h3>
     @endif
     <hr>

@@ -15,4 +15,9 @@ class Answer extends Model
     {
         return $this->belongsTo(Unit::class);
     }
+
+    public function getIsBestAttribute()
+    {
+        return ($this->best_answer ===1 ? true : false);
+    }
 }

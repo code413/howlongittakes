@@ -11,9 +11,13 @@
 |
 */
 
-Route::get('/', 'QuestionsController@index');
-Route::post('/', 'QuestionsController@search');
+Route::get('/', 'HomeController@index');
 Route::resource('to', 'QuestionsController', ['only'=> ['show', 'store']]);
 
-Route::post('answers', 'AnswersController@store');
+Route::resource('answers', 'AnswersController', ['only'=> ['store', 'update']]);
+
+
+Auth::routes();
+Route::get('logout','Auth\LoginController@logout')->name('logout');
+
 

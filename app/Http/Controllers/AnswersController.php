@@ -28,4 +28,9 @@ class AnswersController extends Controller
 
         return back()->with('message', 'Thank you for you submission. The answers will be displayed once is verified.');
     }
+
+    public function update(Request $request)
+    {
+        dd($request->all());
+    }
 }

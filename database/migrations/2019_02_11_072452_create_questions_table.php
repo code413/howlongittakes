@@ -19,9 +19,6 @@ class CreateQuestionsTable extends Migration
             $table->string('slug');
             $table->boolean('approved')->default(0);
             $table->boolean('by_user')->default(0);
-            $table->integer('user_id')->nullable()->unsigned();
-
-            $table->foreign('user_id')->references('id')->on('users');
 
             $table->timestamps();
         });
@@ -34,10 +31,6 @@ class CreateQuestionsTable extends Migration
      */
     public function down()
     {
-        Schema::table('questions', function ($table){
-            $table->dropForeign(['user_id']);
-        });
-
         Schema::drop('questions');
     }
 }

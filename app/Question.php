@@ -15,6 +15,11 @@ class Question extends Model
         return $this->hasMany(Answer::class);
     }
 
+    public function subscribe()
+    {
+        return $this->hasOne(Subscribe::class);
+    }
+
     public function getRouteKeyName()
     {
         return 'slug';
@@ -29,4 +34,15 @@ class Question extends Model
         $average = round( array_sum($answers) / count($answers));
         return $average;
     }
+
+    public function isApproved()
+    {
+        return $this->approved === 1;
+    }
+
+    public function shouldBeSearchable()
+    {
+        return $this->isApproved();
+    }
+
 }
