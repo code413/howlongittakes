@@ -1,13 +1,21 @@
 
-// Body
-$body-bg: #f8fafc;
-
 // Typography
-$font-family-sans-serif: "Nunito", sans-serif;
+$font-sans-serif: 'Quattrocento Sans', Sans-Serif;
+$font-serif: 'Ovo', Serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
 // Colors
+$primary: #0029ff;
+$veryLightBlue: #0029ff05;
+$black: #000;
+$gray: #c5c7d1;
+$text-muted: $gray;
+
+$gray: #e7e9f6;
+$green: #5BC0BE;
+$light-green: #CEEDDB;
+
 $blue: #3490dc;
 $indigo: #6574cd;
 $purple: #9561e2;

@@ -11,6 +11,12 @@ use Illuminate\Http\Request;
 class QuestionsController extends Controller
 {
 
+    public function index()
+    {
+        $questions = Question::paginate(15);
+        return view('questions.index', compact('questions'));
+    }
+
     public function show(Question $to)
     {
         $question = $to;

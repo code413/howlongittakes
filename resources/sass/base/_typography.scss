@@ -1,0 +1,52 @@
+html
+{
+  font-size:10px;
+}
+
+body
+{
+  font-family: $font-sans-serif;
+  font-size:1.6rem;
+  color: $black;
+}
+
+h1
+{
+  font-family: $font-serif;
+  font-size:3rem;
+  line-height: 1;
+}
+
+h2
+{
+  font-size:2rem;
+  font-weight: bold;
+}
+
+.form-control, .btn
+{
+  font-size:1.6rem;
+}
+
+.question
+{
+  font-family: $font-serif;
+}
+
+.answer
+{
+  font-family: $font-sans-serif;
+}
+
+@include media-breakpoint-up(md) {
+
+  h1
+  {
+    font-size:5rem;
+  }
+
+  h2
+  {
+    font-size:3rem;
+  }
+}

@@ -1,0 +1,1 @@
+<small class="d-block text-muted">How long it takes to </small>{{ $question->content }}?

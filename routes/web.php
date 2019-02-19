@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
-Route::resource('to', 'QuestionsController', ['only'=> ['show', 'store']]);
+Route::get('/', 'QuestionsController@index');
+Route::resource('to', 'QuestionsController', ['only'=> [ 'show', 'store']]);
 
 Route::resource('answers', 'AnswersController', ['only'=> ['store', 'update']]);
 

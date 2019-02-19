@@ -1,14 +1,35 @@
-
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-
-// Variables
 @import 'variables';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap/scss/bootstrap';  
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+@import "base/base",
+  "base/typography";
+
+@import "components/search",
+"components/dash-underline",
+"components/questions/card";
+
+
+
+.nav-tabs
+{
+  border-color: transparent !important;
+
+  .nav-link
+  {
+    border:none !important;
+    padding: 0.9rem 2rem;
+
+  }
+  
+  .nav-link.active, .nav-item.show .nav-link
+  {
+    background: $veryLightBlue;
+
+  }
+}
+
+.details
+{
+  background: $veryLightBlue;
 }

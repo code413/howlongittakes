@@ -45,4 +45,8 @@ class Question extends Model
         return $this->isApproved();
     }
 
+
+    public function isAnswered(){
+        return $this->answers->count() > 0;
+    }
 }
