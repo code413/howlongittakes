@@ -16,8 +16,23 @@ class Answer extends Model
         return $this->belongsTo(Unit::class);
     }
 
-    public function getIsBestAttribute()
+    public function getIsApprovedAttribute()
     {
-        return ($this->best_answer ===1 ? true : false);
+        return $this->approved === 1;
+    }
+
+    public function scopeApproved($query)
+    {
+        return $query->where('approved', 1);
+    }
+
+    public function getIsSelectedAttribute()
+    {
+        return $this->selected === 1;
+    }
+
+    public function scopeSelected($query)
+    {
+        return $query->where('selected', 1);
     }
 }

@@ -21,7 +21,8 @@ class CreateAnswersTable extends Migration
             $table->string('url');
             $table->boolean('approved')->default(0);
             $table->boolean('discovered')->default(0);
-            $table->boolean('best_answer')->default(0);
+            $table->boolean('selected')->default(0);
+            $table->string('aggregation');
 
             $table->foreign('question_id')->references('id')->on('questions');
             $table->foreign('unit_id')->references('id')->on('units');

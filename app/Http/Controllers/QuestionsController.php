@@ -13,7 +13,13 @@ class QuestionsController extends Controller
 
     public function index()
     {
-        $questions = Question::paginate(15);
+        /*$questions = Question::all();
+        foreach ($questions as $question){
+            dd($question->answers());
+
+        }*/
+
+
         return view('questions.index', compact('questions'));
     }
 

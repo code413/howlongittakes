@@ -28,9 +28,9 @@
                                 <div class="card-body d-flex flex-column">
                                    <h2><small class="d-block text-muted">How long it takes to </small> @{{ result.content }}?</h2>
                                     <div class="mt-auto text-right">
-                                        <div class="answer" v-if="result.is_answered === true">
+                                        <div class="answer" v-if="result.has_selected === true">
                                             <small>on average</small>
-                                            <h3 class="d-inline text-primary">@{{ result.best_answer }}</h3>
+                                            <h3 class="d-inline text-primary">@{{ result.average_answer }} @{{ result.unit }}</h3>
                                         </div>
                                         <p v-else>
                                             Answer now!
