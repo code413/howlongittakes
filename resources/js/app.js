@@ -15,6 +15,6 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 window.onload = function () {
 
     const app = new Vue({
-        el: '#app',
+        el: '#search',
     });
 }

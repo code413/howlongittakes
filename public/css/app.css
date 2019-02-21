@@ -10549,13 +10549,23 @@ h2 {
   }
 }
 
-#search {
+#search .ais-input {
   padding: 3rem;
   border: none;
   border-bottom: solid 0.1rem #e7e9f6;
   outline: none;
   box-shadow: none;
   font-size: 1.8rem;
+}
+
+#search .ais-pagination {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+#search .ais-pagination__item {
+  padding: 0 1%;
 }
 
 .dash-underline {

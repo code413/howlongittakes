@@ -35,6 +35,11 @@ class Question extends Model
         return $average;
     }
 
+    public function bestAnswer()
+    {
+        return 1;
+    }
+
     public function isApproved()
     {
         return $this->approved === 1;
@@ -48,5 +53,16 @@ class Question extends Model
 
     public function isAnswered(){
         return $this->answers->count() > 0;
+    }
+
+
+    public function toSearchableArray()
+    {
+        $array = $this->toArray();
+
+        $array['is_answered'] = $this->isAnswered();
+        $array['best_answer'] = $this->bestAnswer();
+
+        return $array;
     }
 }

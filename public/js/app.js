@@ -73995,7 +73995,7 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
 
 window.onload = function () {
   var app = new Vue({
-    el: '#app'
+    el: '#search'
   });
 };
 
