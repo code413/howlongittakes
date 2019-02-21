@@ -73988,16 +73988,23 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
-Vue.use(vue_instantsearch__WEBPACK_IMPORTED_MODULE_0__["default"]); // const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
-
+Vue.use(vue_instantsearch__WEBPACK_IMPORTED_MODULE_0__["default"]);
 Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue").default);
 
 window.onload = function () {
   var app = new Vue({
-    el: '#search'
+    el: '#search',
+    methods: {
+      updateValue: function updateValue() {
+        $('#search .ais-input').keyup(function () {
+          $('#new-question').val($(this).val());
+        });
+      }
+    }
   });
 };
+
+$(document).ready(function () {});
 
 /***/ }),
 

@@ -7,14 +7,17 @@
 @section('content')
     <section class="questions" style="width: 100%">
         <h1>How long it takes to ...</h1>
-
+        <div class="col">
+            @include('partials.errors')
+            @include('partials.messages')
+        </div>
         <div id="search">
             <ais-index
                     app-id="{{ env('ALGOLIA_APP_ID') }}"
                     api-key="{{ env('ALGOLIA_SEARCH_KEY') }}"
                     index-name="questions"
             >
-                <ais-search-box placeholder="Find a question..."></ais-search-box>
+                <ais-input placeholder="Find a question..." v-on:query="updateValue"></ais-input>
                 <ais-results :class="{'row': 'row'}">
 
                     <template slot-scope="{ result }">
@@ -47,15 +50,21 @@
 
                                 <form method="POST" action="{{ action('QuestionsController@store') }}">
                                     @csrf
-                                    <input type="hidden" name="question">
+                                    <input id="new-question" type="hidden" name="question" value="">
                                     <div class="col">
                                         <h3>No result found.<br>Submit this question to get the answer.</h3>
                                     </div>
-                                    <label>Type your email if you wish to get the answer.</label>
-                                    <input type="email" name="email">
-                                    <input type="submit">
-                                    @include('partials.errors')
-                                    @include('partials.messages')
+                                    <div class="col">
+                                        <label>Type your email if you wish to get the answer.</label>
+                                        <br>
+                                        <input class="email" type="email" name="email" placeholder="yourname@example.com">
+
+                                    </div>
+                                    <div class="col">
+                                        <input type="submit">
+                                    </div>
+
+
 
                                 </form>
                             </div>
@@ -65,9 +74,11 @@
 
                 <ais-pagination :padding="5"></ais-pagination>
 
+                <ais-powered-by :class="{'text-center': 'power-by'}"></ais-powered-by>
 
             </ais-index>
         </div>
+
     </section>
 
 
