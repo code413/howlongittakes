@@ -28,14 +28,7 @@ class Question extends Model
 
     public function averageAnswer()
     {
-        $answers = [];
-        foreach ($this->answers as $answer){
-            if(!$answer->isSelected)
-            {
-                continue;
-            }
-            $answers[] =$answer->value;
-        }
+        $answers = $this->selectedAnswers();
 
         if(count($answers) === 0)
         {
@@ -48,12 +41,32 @@ class Question extends Model
 
     public function rangeAnswer()
     {
+        $answers = $this->selectedAnswers();
 
+        if(empty($answers)){
+            return false;
+        }
+
+        $range=[
+            'min'=>min($answers),
+            'max'=>max($answers)
+        ];
+
+        return $range;
     }
 
-    public function bestAnswer()
+    public function selectedAnswers()
     {
-        return 1;
+        $answers = [];
+        foreach ($this->answers as $answer){
+            if(!$answer->isSelected)
+            {
+                continue;
+            }
+            $answers[] =$answer->value;
+        }
+
+        return $answers;
     }
 
     public function isApproved()
@@ -80,8 +93,21 @@ class Question extends Model
 
         $array['has_selected'] = $this->answers()->selected()->count() > 0;
         $array['average_answer'] = $this->averageAnswer();
+        $array['is_average'] = $this->isAverage;
+        $array['range_answer'] = $this->rangeAnswer();
+        $array['is_range'] = $this->isRange;
         $array['unit'] = $unit;
 
         return $array;
+    }
+
+    public function getIsRangeAttribute()
+    {
+        return $this->aggregation === 'range';
+    }
+
+    public function getIsAverageAttribute()
+    {
+        return $this->aggregation === 'average';
     }
 }

@@ -38,12 +38,16 @@ class QuestionsTableSeeder extends Seeder
             'walk the great wall of china',
             'zip a file',
         ];
+
+        $aggregation = ['average', 'range'];
+
         foreach ($questions as $question) {
             DB::table('questions')->insert([
                 [
                     'content' => $question,
                     'slug' => str_slug($question, '-'),
-                    'approved' => true
+                    'approved' => true,
+                    'aggregation' => $aggregation[mt_rand(0, count($aggregation) - 1)]
                 ]
             ]);
         }

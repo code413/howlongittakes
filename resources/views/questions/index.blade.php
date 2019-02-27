@@ -26,15 +26,29 @@
                             <a :href="/to/ + result.slug" class="question card card-question mb-3 mb-sm-5"
                                style="min-height: 15rem;">
                                 <div class="card-body d-flex flex-column">
-                                   <h2><small class="d-block text-muted">How long it takes to </small> @{{ result.content }}?</h2>
+                                    <h2>
+                                        <small class="d-block text-muted">How long it takes to</small>
+                                        @{{ result.content }}?
+                                    </h2>
                                     <div class="mt-auto text-right">
                                         <div class="answer" v-if="result.has_selected === true">
-                                            <small>on average</small>
-                                            <h3 class="d-inline text-primary">@{{ result.average_answer }} @{{ result.unit }}</h3>
+
+                                            <div v-if="result.is_average">
+                                                <small>on average</small>
+                                                <h3 class="d-inline text-primary">@{{ result.average_answer }} @{{
+                                                    result.unit }}</h3>
+                                            </div>
+
+                                            <div v-if="result.is_range">
+                                                <small>between</small>
+                                                <h3 class="d-inline text-primary">@{{ result.range_answer.min }} <span style="color: black">to</span> @{{
+                                                    result.range_answer.max }} @{{ result.unit }}</h3>
+                                            </div>
                                         </div>
                                         <p v-else>
                                             Answer now!
                                         </p>
+
                                     </div>
                                 </div>
                             </a>
@@ -57,13 +71,13 @@
                                     <div class="col">
                                         <label>Type your email if you wish to get the answer.</label>
                                         <br>
-                                        <input class="email" type="email" name="email" placeholder="yourname@example.com">
+                                        <input class="email" type="email" name="email"
+                                               placeholder="yourname@example.com">
 
                                     </div>
                                     <div class="col">
                                         <input type="submit">
                                     </div>
-
 
 
                                 </form>

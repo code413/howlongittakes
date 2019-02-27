@@ -23,7 +23,9 @@
         </div>
 
         @if($question->answers->count() > 0)
+
             @include('answers.partials.content', ['answer' => $question->answers->first()])
+
         @else
             <h2>Submit your answer with a reliable reference now.</h2>
         @endif

@@ -19,6 +19,7 @@ class CreateQuestionsTable extends Migration
             $table->string('slug');
             $table->boolean('approved')->default(0);
             $table->boolean('by_user')->default(0);
+            $table->string('aggregation');
 
             $table->timestamps();
         });

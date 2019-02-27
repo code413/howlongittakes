@@ -10550,12 +10550,14 @@ h2 {
 }
 
 #search .ais-input {
-  padding: 3rem;
+  padding: 2rem;
   border: none;
   border-bottom: solid 0.1rem #e7e9f6;
   outline: none;
-  box-shadow: none;
   font-size: 1.8rem;
+  width: 100%;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  margin: 2rem 0;
 }
 
 #search .ais-pagination {
