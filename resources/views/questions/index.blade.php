@@ -35,14 +35,15 @@
 
                                             <div v-if="result.is_average">
                                                 <small>on average</small>
-                                                <h3 class="d-inline text-primary">@{{ result.average_answer }} @{{
-                                                    result.unit }}</h3>
+                                                <h3 class="d-inline text-primary">@{{ result.average_answer }}
+                                                    @{{  result.unit }}</h3>
                                             </div>
 
                                             <div v-if="result.is_range">
                                                 <small>between</small>
-                                                <h3 class="d-inline text-primary">@{{ result.range_answer.min }} <span style="color: black">to</span> @{{
-                                                    result.range_answer.max }} @{{ result.unit }}</h3>
+                                                <h3 class="d-inline text-primary">@{{ result.range_answer.min }}
+                                                    <span style="color: black">to</span> @{{ result.range_answer.max }}
+                                                    @{{ result.unit }}</h3>
                                             </div>
                                         </div>
                                         <p v-else>

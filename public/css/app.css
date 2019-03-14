@@ -10497,12 +10497,26 @@ body {
   justify-content: space-between;
 }
 
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+main {
+  min-height: 100vh;
+}
+
 a,
 a:hover,
 a:active,
 a:focus {
   color: inherit;
   text-decoration: none;
+}
+
+.row {
+  margin: 1rem 0;
 }
 
 html {
@@ -10529,6 +10543,8 @@ h2 {
 .form-control,
 .btn {
   font-size: 1.6rem;
+  height: auto;
+  min-height: 4rem;
 }
 
 .question {
@@ -10618,10 +10634,10 @@ h2 {
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  background: #0029ff05;
+  background: #0029FF20;
 }
 
 .details {
-  background: #0029ff05;
+  background: #0029FF20;
 }
 

@@ -11,46 +11,118 @@ class QuestionsTableSeeder extends Seeder
      */
     public function run()
     {
-        $questions = [
-            'boil an egg',
-            'get to the Mars',
-            'be a pilot',
-            'learn to swim',
-            'digest food',
-            'get abs',
-            'renew IC',
-            'adopt a child',
-            'charge iphone x',
-            'defrost chicken',
-            'establish credit',
-            'freeze water',
-            'form a habit',
-            'hear back from an interview',
-            'learn a foreign language',
-            'lose weight',
-            'mine a bitcoin',
-            'open a bank account',
-            'orbit the sun',
-            'quit smoking',
-            'study psychology',
-            'transfer money',
-            'update windows',
-            'walk the great wall of china',
-            'zip a file',
-        ];
-
-        $aggregation = ['average', 'range'];
-
-        foreach ($questions as $question) {
             DB::table('questions')->insert([
                 [
-                    'content' => $question,
-                    'slug' => str_slug($question, '-'),
+                    'content' => 'get to mars',
+                    'slug' => str_slug('get to mars', '-'),
                     'approved' => true,
-                    'aggregation' => $aggregation[mt_rand(0, count($aggregation) - 1)]
-                ]
+                    'aggregation' => 'average'
+                ],
+                [
+                    'content' => 'digest food',
+                    'slug' => str_slug('digest food', '-'),
+                    'approved' => true,
+                    'aggregation' => 'range'
+                ],
+                [
+                    'content' => 'get to the moon',
+                    'slug' => str_slug('get to the moon', '-'),
+                    'approved' => true,
+                    'aggregation' => 'average'
+                ],
+                [
+                    'content' => 'boil eggs',
+                    'slug' => str_slug('boil eggs', '-'),
+                    'approved' => true,
+                    'aggregation' => 'range'
+                ],
+                [
+                    'content' => 'let oil-based paint to dry',
+                    'slug' => str_slug('let oil-based paint to dry', '-'),
+                    'approved' => true,
+                    'aggregation' => 'range'
+                ],
+                [
+                    'content' => 'let latex paint to dry',
+                    'slug' => str_slug('let latex paint to dry', '-'),
+                    'approved' => true,
+                    'aggregation' => 'average'
+                ],
+                [
+                    'content' => 'antibiotics to work',
+                    'slug' => str_slug('antibiotics to work', '-'),
+                    'approved' => true,
+                    'aggregation' => 'range'
+                ],
+                [
+                    'content' => 'get into ketosis',
+                    'slug' => str_slug('get into ketosis', '-'),
+                    'approved' => true,
+                    'aggregation' => 'range'
+                ],
+                [
+                    'content' => 'cook a 25lb (pound) turkey',
+                    'slug' => str_slug('cook a 25lb (pound) turkey', '-'),
+                    'approved' => true,
+                    'aggregation' => 'range'
+                ],
+                [
+                    'content' => 'charge airpods',
+                    'slug' => str_slug('charge airpods', '-'),
+                    'approved' => true,
+                    'aggregation' => 'range'
+                ],
+                [
+                    'content' => 'charge a juul',
+                    'slug' => str_slug('charge a juul', '-'),
+                    'approved' => true,
+                    'aggregation' => 'average'
+                ],
+                [
+                    'content' => 'get waves',
+                    'slug' => str_slug('get waves', '-'),
+                    'approved' => true,
+                    'aggregation' => 'range'
+                ],
+                [
+                    'content' => 'plastic bottles to decompose',
+                    'slug' => str_slug('plastic bottles to decompose', '-'),
+                    'approved' => true,
+                    'aggregation' => 'average'
+                ],
+                [
+                    'content' => 'food poisoning to hit',
+                    'slug' => str_slug('food poisoning to hit', '-'),
+                    'approved' => true,
+                    'aggregation' => 'average'
+                ],
+                [
+                    'content' => 'get pregnant',
+                    'slug' => str_slug('get pregnant', '-'),
+                    'approved' => true,
+                    'aggregation' => 'range'
+                ],
+                [
+                    'content' => 'boil potatoes',
+                    'slug' => str_slug('boil potatoes', '-'),
+                    'approved' => true,
+                    'aggregation' => 'range'
+                ],
+                [
+                    'content' => 'walk a mile',
+                    'slug' => str_slug('walk a mile', '-'),
+                    'approved' => true,
+                    'aggregation' => 'range'
+                ],
+                [
+                    'content' => 'tattoo to heal',
+                    'slug' => str_slug('tattoo to heal', '-'),
+                    'approved' => true,
+                    'aggregation' => 'range'
+                ],
+
             ]);
-        }
+
 
     }
 }

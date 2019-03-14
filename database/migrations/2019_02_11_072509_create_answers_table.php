@@ -16,7 +16,9 @@ class CreateAnswersTable extends Migration
         Schema::create('answers', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('question_id')->unsigned();
-            $table->string('value');
+            $table->decimal('average_value', 8, 1)->nullable();
+            $table->decimal('min_value', 8, 1)->nullable();
+            $table->decimal('max_value', 8, 1)->nullable();
             $table->integer('unit_id')->unsigned();
             $table->string('url');
             $table->boolean('approved')->default(0);

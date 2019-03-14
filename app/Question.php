@@ -28,7 +28,7 @@ class Question extends Model
 
     public function averageAnswer()
     {
-        $answers = $this->selectedAnswers();
+        $answers = $this->selectedAverageAnswers();
 
         if(count($answers) === 0)
         {
@@ -41,7 +41,7 @@ class Question extends Model
 
     public function rangeAnswer()
     {
-        $answers = $this->selectedAnswers();
+        $answers = $this->selectedRangeAnswers();
 
         if(empty($answers)){
             return false;
@@ -51,11 +51,34 @@ class Question extends Model
             'min'=>min($answers),
             'max'=>max($answers)
         ];
+        $range=[
+            'min'=>round( array_sum($range['min']) / count($range['min']), 1),
+            'max'=>round( array_sum($range['max']) / count($range['max']), 1)
+        ];
 
         return $range;
     }
 
-    public function selectedAnswers()
+    public function selectedRangeAnswers()
+    {
+        $answers = [];
+        $min_answers = [];
+        $max_answers = [];
+        foreach ($this->answers as $answer){
+            if(!$answer->isSelected)
+            {
+                continue;
+            }
+            $min_answers[] =$answer->min_value;
+            $max_answers[] =$answer->max_value;
+        }
+        $answers[]=$min_answers;
+        $answers[]=$max_answers;
+
+        return $answers;
+    }
+
+    public function selectedAverageAnswers()
     {
         $answers = [];
         foreach ($this->answers as $answer){
@@ -63,11 +86,15 @@ class Question extends Model
             {
                 continue;
             }
-            $answers[] =$answer->value;
+            $answers[] =$answer->average_value;
         }
 
         return $answers;
     }
+
+
+
+
 
     public function isApproved()
     {
@@ -90,6 +117,14 @@ class Question extends Model
         $array = $this->toArray();
 
         $unit = Unit::find($this->answers()->selected()->first()['unit_id'])['name'];
+
+
+        if($this->answers()->selected()->first()['average_value'] > 1 || $this->answers()->selected()->first()['max_value'] > 1 ){
+
+            $unit = Str::plural($unit);
+
+        }
+
 
         $array['has_selected'] = $this->answers()->selected()->count() > 0;
         $array['average_answer'] = $this->averageAnswer();
