@@ -16,6 +16,9 @@ Route::resource('to', 'QuestionsController', ['only'=> [ 'show', 'store']]);
 
 Route::resource('answers', 'AnswersController', ['only'=> ['store', 'update']]);
 
+Route::view('/terms','terms.index');
+
+
 
 Auth::routes();
 Route::get('logout','Auth\LoginController@logout')->name('logout');

@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('main.class', 'd-flex p-3 p-sm-5 flex-wrap flex-row')
+@section('main.class', 'p-3 p-sm-5 flex-column flex-grow align-items-center justify-content-center')
 
 
 

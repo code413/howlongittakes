@@ -82,7 +82,7 @@
                             </div>
                         @endif
 
-                        <small class="col-6 col-md-3 text-right text-muted">Added 5 days ago</small>
+                        <small class="col-6 col-md-3 text-right text-muted">Added {{ $answer->created_at->diffForHumans() }}</small>
                     </div>
 
 
@@ -123,7 +123,7 @@
                             </div>
                         @endif
 
-                        <small class="col-6 col-md-3 text-right text-muted">Added 5 days ago</small>
+                        <small class="col-6 col-md-3 text-right text-muted">Added {{ $answer->created_at->diffForHumans() }}</small>
                     </div>
                 @endforeach
             </div>

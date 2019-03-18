@@ -10503,10 +10503,6 @@ body {
   margin: 0;
 }
 
-main {
-  min-height: 100vh;
-}
-
 a,
 a:hover,
 a:active,
@@ -10531,7 +10527,7 @@ body {
 
 h1 {
   font-family: "Ovo", Serif;
-  font-size: 3rem;
+  font-size: 2.8rem;
   line-height: 1;
 }
 
