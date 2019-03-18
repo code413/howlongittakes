@@ -6,11 +6,15 @@
     border-bottom: solid 0.1rem #e7e9f6;
     outline: none;
     font-size: 1.8rem;
-    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .ais-input{
+    box-shadow: 6px 0 20px 0 rgba(0, 0, 0, 0.1);
   }
 
   .input-group-text{
     font-size: 3rem;
+    box-shadow: -6px 0px 20px 0 rgba(0, 0, 0, 0.1);
   }
 
   .ais-pagination{

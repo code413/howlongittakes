@@ -71,7 +71,7 @@
                             </div>
                         @elseif($question->isRange)
                             <div class="col-6 col-md-3 text-primary">
-                                {{ $answer->min_value }} to {{ $answer->max_value }}
+                                {{ $answer->min_value + 0 }} to {{ $answer->max_value +0  }}
 
                                 @if($answer->max_value > 1)
                                     {{ Illuminate\Support\Str::plural($answer->unit->name) }}
@@ -112,8 +112,8 @@
                             </div>
                         @elseif($question->isRange)
                             <div class="col-6 col-md-3 text-primary">
-                                {{ $answer->min_value }}
-                                to {{ $answer->max_value }}
+                                {{ $answer->min_value + 0 }}
+                                to {{ $answer->max_value + 0 }}
 
                                 @if($answer->max_value > 1)
                                     {{ Illuminate\Support\Str::plural($answer->unit->name) }}

@@ -20,7 +20,7 @@
                     <div class="input-group-prepend">
                         <h1 class="input-group-text" id="basic-addon1">How long it takes to</h1>
                     </div>
-                    <ais-input placeholder="..." v-on:query="updateValue" class="form-control" onblur="this.focus()" autofocus></ais-input>
+                    <ais-input placeholder="..." v-on:query="updateValue" class="form-control"></ais-input>
                 </div>
                 <ais-results :class="{'row': 'row'}">
 

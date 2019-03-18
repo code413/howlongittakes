@@ -52,8 +52,8 @@ class Question extends Model
             'max'=>max($answers)
         ];
         $range=[
-            'min'=>round( array_sum($range['min']) / count($range['min']), 1),
-            'max'=>round( array_sum($range['max']) / count($range['max']), 1)
+            'min'=>min($range['min']) + 0,
+            'max'=>max($range['max']) + 0,
         ];
 
         return $range;
@@ -91,10 +91,6 @@ class Question extends Model
 
         return $answers;
     }
-
-
-
-
 
     public function isApproved()
     {
