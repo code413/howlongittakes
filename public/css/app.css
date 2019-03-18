@@ -10561,15 +10561,18 @@ h2 {
   }
 }
 
-#search .ais-input {
+#search .ais-input,
+#search .input-group-text {
   padding: 2rem;
   border: none;
   border-bottom: solid 0.1rem #e7e9f6;
   outline: none;
   font-size: 1.8rem;
-  width: 100%;
   box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.1);
-  margin: 2rem 0;
+}
+
+#search .input-group-text {
+  font-size: 3rem;
 }
 
 #search .ais-pagination {
@@ -10580,6 +10583,16 @@ h2 {
 
 #search .ais-pagination__item {
   padding: 0 1%;
+}
+
+@media (max-width: 575.98px) {
+  #search .input-group-prepend {
+    width: 100%;
+  }
+
+  #search .input-group-text {
+    font-size: 1.5rem;
+  }
 }
 
 .dash-underline {

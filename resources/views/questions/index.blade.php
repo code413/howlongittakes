@@ -6,7 +6,6 @@
 
 @section('content')
     <section class="questions" style="width: 100%">
-        <h1>How long it takes to ...</h1>
         <div class="col">
             @include('partials.errors')
             @include('partials.messages')
@@ -17,7 +16,12 @@
                     api-key="{{ env('ALGOLIA_SEARCH_KEY') }}"
                     index-name="questions"
             >
-                <ais-input placeholder="Find a question..." v-on:query="updateValue"></ais-input>
+                <div class="input-group mb-5 row">
+                    <div class="input-group-prepend">
+                        <h1 class="input-group-text" id="basic-addon1">How long it takes to</h1>
+                    </div>
+                    <ais-input placeholder="..." v-on:query="updateValue" class="form-control" onblur="this.focus()" autofocus></ais-input>
+                </div>
                 <ais-results :class="{'row': 'row'}">
 
                     <template slot-scope="{ result }">
