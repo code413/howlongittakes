@@ -2,6 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     @section('head')
+        @include('layouts.partials.gtm-head')
         @include('layouts.partials.meta')
         <title>@yield('title','How long it takes')</title>
         @include('layouts.partials.fonts')
@@ -10,6 +11,8 @@
     @show
 </head>
 <body class="@yield('superclass')">
+@include('layouts.partials.gtm-body')
+
 
 @section('header')
 @show
