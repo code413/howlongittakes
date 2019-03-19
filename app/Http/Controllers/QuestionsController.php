@@ -54,7 +54,7 @@ class QuestionsController extends Controller
         }
 
 
-        return back()->with('message', 'Thank you for you submission. The question will be displayed once is verified.');
+        return back()->with('message', 'Thank you for you submission. The question will be listed once is verified.');
 
     }
 }

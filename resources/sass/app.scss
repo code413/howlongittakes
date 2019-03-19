@@ -5,31 +5,11 @@
 @import "base/base",
   "base/typography";
 
-@import "components/search",
+@import "components/questions/index",
 "components/dash-underline",
-"components/questions/card";
+"components/questions/card",
+"components/questions/show";
 
 
 
-.nav-tabs
-{
-  border-color: transparent !important;
 
-  .nav-link
-  {
-    border:none !important;
-    padding: 0.9rem 2rem;
-
-  }
-  
-  .nav-link.active, .nav-item.show .nav-link
-  {
-    background: $lightBlue;
-
-  }
-}
-
-.details
-{
-  background: $lightBlue;
-}

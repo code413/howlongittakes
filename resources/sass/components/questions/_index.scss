@@ -1,5 +1,9 @@
 #search
 {
+  .input-group{
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
   .ais-input, .input-group-text{
     padding: 2rem;
     border: none;
@@ -9,12 +13,21 @@
   }
 
   .ais-input{
-    box-shadow: 6px 0 20px 0 rgba(0, 0, 0, 0.1);
+    padding-left: 0;
+    font-family: $font-serif;
+    font-size: 3rem;
+
+
+    &:focus{
+      box-shadow: none;
+
+    }
   }
 
   .input-group-text{
+    background: none;
     font-size: 3rem;
-    box-shadow: -6px 0px 20px 0 rgba(0, 0, 0, 0.1);
+    padding-right: 1rem;
   }
 
   .ais-pagination{
@@ -29,11 +42,8 @@
 
   @include media-breakpoint-down(xs) {
 
-    .input-group-prepend{
-      width: 100%;
-    }
 
-    .input-group-text{
+    .input-group-text, .ais-input{
       font-size: 1.5rem;
     }
 

@@ -34,7 +34,7 @@ class Question extends Model
         {
             return "false";
         }
-        $average = round( array_sum($answers) / count($answers));
+        $average = round( array_sum($answers) / count($answers)) + 0;
 
         return $average;
     }

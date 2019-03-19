@@ -413,7 +413,7 @@ class AnswersTableSeeder extends Seeder
                 'url' => "https://www.healthline.com/nutrition/10-signs-and-symptoms-of-ketosis#section7",
                 'approved' => 1,
                 'discovered' => 1,
-                'selected' => 1,
+                'selected' => 0,
                 'created_at' => Carbon::now()->subDays(rand(1, 50))->format('Y-m-d H:i:s'),
             ],
             [
@@ -558,7 +558,7 @@ class AnswersTableSeeder extends Seeder
                 'url' => "https://www.thespruceeats.com/turkey-cooking-times-1807695",
                 'approved' => 1,
                 'discovered' => 1,
-                'selected' => 1,
+                'selected' => 0,
                 'created_at' => Carbon::now()->subDays(rand(1, 50))->format('Y-m-d H:i:s'),
             ],
 
@@ -734,7 +734,7 @@ class AnswersTableSeeder extends Seeder
                 'url' => "https://www.thekitchn.com/how-to-boil-potatoes-cooking-lessons-from-the-kitchn-64716",
                 'approved' => 1,
                 'discovered' => 1,
-                'selected' => 1,
+                'selected' => 0,
                 'created_at' => Carbon::now()->subDays(rand(1, 50))->format('Y-m-d H:i:s'),],
 
             [

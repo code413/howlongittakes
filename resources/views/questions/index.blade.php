@@ -1,14 +1,12 @@
 @extends('layouts.master')
 
-@section('main.class', 'p-3 p-sm-5 flex-column flex-grow align-items-center justify-content-center')
+@section('main.class', 'flex-column flex-grow align-items-center justify-content-center')
 
 
 
 @section('content')
     <section class="questions" style="width: 100%">
         <div class="col">
-            @include('partials.errors')
-            @include('partials.messages')
         </div>
         <div id="search">
             <ais-index
@@ -16,12 +14,16 @@
                     api-key="{{ env('ALGOLIA_SEARCH_KEY') }}"
                     index-name="questions"
             >
-                <div class="input-group mb-5 row">
+                <div class="input-group mb-5 mt-0 row">
                     <div class="input-group-prepend">
                         <h1 class="input-group-text" id="basic-addon1">How long it takes to</h1>
                     </div>
-                    <ais-input placeholder="..." v-on:query="updateValue" class="form-control"></ais-input>
+                    <ais-input placeholder="..." v-on:query="updateValue" class="form-control" autofocus></ais-input>
+
                 </div>
+                @include('partials.messages')
+                @include('partials.errors')
+
                 <ais-results :class="{'row': 'row'}">
 
                     <template slot-scope="{ result }">
@@ -40,7 +42,7 @@
                                             <div v-if="result.is_average">
                                                 <small>on average</small>
                                                 <h3 class="d-inline text-primary">@{{ result.average_answer }}
-                                                    @{{  result.unit }}</h3>
+                                                    @{{ result.unit }}</h3>
                                             </div>
 
                                             <div v-if="result.is_range">
@@ -70,18 +72,28 @@
                                 <form method="POST" action="{{ action('QuestionsController@store') }}">
                                     @csrf
                                     <input id="new-question" type="hidden" name="question" value="">
-                                    <div class="col">
-                                        <h3>No result found.<br>Submit this question to get the answer.</h3>
-                                    </div>
-                                    <div class="col">
-                                        <label>Type your email if you wish to get the answer.</label>
-                                        <br>
-                                        <input class="email" type="email" name="email"
-                                               placeholder="yourname@example.com">
 
+                                    <div class="row">
+                                        <div class="col">
+                                            <h2>No result found!</h2>
+                                            <p class="m-0">Click the submit button to list the question.</p>
+                                        </div>
                                     </div>
-                                    <div class="col">
-                                        <input type="submit">
+
+                                    <div class="row">
+                                        <div class="col">
+                                            <label>You can also enter your email if you wish to get the answer.</label>
+                                            <br>
+                                            <input class="email p-3 w-100" type="email" name="email"
+                                                   placeholder="yourname@example.com" style="max-width: 35rem">
+
+                                        </div>
+                                    </div>
+                                    <div class="row mt-5">
+                                        <div class="col">
+                                            <input class="btn btn-primary" type="submit" value="Submit">
+
+                                        </div>
                                     </div>
 
 

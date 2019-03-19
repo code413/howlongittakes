@@ -1,0 +1,32 @@
+.question-show{
+
+  .nav-tabs
+  {
+    border-color: transparent !important;
+
+    .nav-link
+    {
+      border:none !important;
+      padding: 0.9rem 2rem;
+
+    }
+
+    .nav-link.active, .nav-item.show .nav-link
+    {
+      background: $lightBlue;
+      color:$primary;
+      font-weight: bold;
+
+    }
+  }
+
+
+  .details{
+    background: $lightBlue;
+
+    a{
+      display: block;
+      overflow: hidden;
+    }
+  }
+}

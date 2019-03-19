@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('main.class', 'flex-column flex-grow align-items-center justify-content-center')
+@section('main.class', 'flex-column flex-grow align-items-center justify-content-center question-show')
 
 @section('header')
     <header class="p-5">
@@ -32,7 +32,7 @@
 
     </div>
 
-    <ul class="nav nav-tabs justify-content-center" role="tablist">
+    <ul class="nav nav-tabs justify-content-center flex-md-row flex-column" role="tablist">
         <li class="nav-item">
             <a class="nav-link {{ ($question->answers()->selected()->count() > 0 ? 'active' : '')}}" data-toggle="tab"
                href="#references">Selected references <strong
@@ -60,7 +60,7 @@
 
                         @if($question->isAverage)
                             <div class="col-6 col-md-3 text-primary">
-                                {{ $answer->average_value }}
+                                {{ $answer->average_value + 0 }}
 
                                 @if($answer->average_value > 1)
                                     {{ Illuminate\Support\Str::plural($answer->unit->name) }}
@@ -85,23 +85,19 @@
                         <small class="col-6 col-md-3 text-right text-muted">Added {{ $answer->created_at->diffForHumans() }}</small>
                     </div>
 
-
-
-
-
                 @endforeach
             </div>
 
             <div id="other-answers" class="tab-pane" role="tabpanel">
                 @foreach($question->answers()->approved()->get() as $answer)
-                    <div class="row mb-2">
-                        <div class="col-6">
+                    <div class="row mb-4 mb-md-2">
+                        <div class="col-12 col-md-6">
                             <a href="{{ $answer->url }}" target="_blank">{{ str_limit($answer->url, 50) }}</a>
                         </div>
 
                         @if($question->isAverage)
                             <div class="col-6 col-md-3 text-primary">
-                                {{ $answer->average_value }}
+                                {{ $answer->average_value + 0 }}
 
                                 @if($answer->average_value > 1)
                                     {{ Illuminate\Support\Str::plural($answer->unit->name) }}
@@ -128,7 +124,7 @@
                 @endforeach
             </div>
 
-            <form class="tab-pane {{ ($question->answers()->selected()->count() < 1 ? 'active' : '')}}" id="new-answer"
+            <form id="new-answer" class="tab-pane {{ ($question->answers()->selected()->count() < 1 ? 'active' : '')}}"
                   role="tabpanel" action="{{ action('AnswersController@store', ['questionId'=>$question->id]) }}"
                   method="POST">
                 @csrf
