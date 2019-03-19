@@ -5,6 +5,12 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
+    <loc>https://howlongittakes.com/to/</loc>
+    <changefreq>Monthly</changefreq>
+    <priority>1</priority>
+    <lastmod>2019-03-19T06:12:23Z</lastmod>
+  </url>
+  <url>
     <loc>https://howlongittakes.com/terms</loc>
     <changefreq>Monthly</changefreq>
     <priority>1</priority>
