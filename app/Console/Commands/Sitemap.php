@@ -41,7 +41,7 @@ class Sitemap extends Command
      */
     public function handle()
     {
-        $sitemap = SitemapGenerator::create(url('/'))->getSitemap();
+        $sitemap = SitemapGenerator::create('https://howlongittakes.com/')->getSitemap();
 
 
         foreach (Question::where('approved', '1')->get() as $question) {
