@@ -209,7 +209,7 @@ class AnswersTableSeeder extends Seeder
                 'created_at' => Carbon::now()->subDays(rand(1, 50))->format('Y-m-d H:i:s'),
             ],
 
-            [
+            /*[
                 'question_id' => 5,
                 'average_value' => null,
                 'min_value' => "6",
@@ -268,9 +268,9 @@ class AnswersTableSeeder extends Seeder
                 'discovered' => 1,
                 'selected' => 1,
                 'created_at' => Carbon::now()->subDays(rand(1, 50))->format('Y-m-d H:i:s'),
-            ],
+            ],*/
 
-            [
+            /*[
                 'question_id' => 6,
                 'average_value' => "1",
                 'min_value' => null,
@@ -341,9 +341,9 @@ class AnswersTableSeeder extends Seeder
                 'discovered' => 1,
                 'selected' => 1,
                 'created_at' => Carbon::now()->subDays(rand(1, 50))->format('Y-m-d H:i:s'),
-            ],
+            ],*/
 
-            [
+            /*[
                 'question_id' => 7,
                 'average_value' => null,
                 'min_value' => "2",
@@ -378,10 +378,10 @@ class AnswersTableSeeder extends Seeder
                 'discovered' => 1,
                 'selected' => 1,
                 'created_at' => Carbon::now()->subDays(rand(1, 50))->format('Y-m-d H:i:s'),
-            ],
+            ],*/
 
             [
-                'question_id' => 8,
+                'question_id' => 5,
                 'average_value' => null,
                 'min_value' => "2",
                 'max_value' => "3",
@@ -393,7 +393,7 @@ class AnswersTableSeeder extends Seeder
                 'created_at' => Carbon::now()->subDays(rand(1, 50))->format('Y-m-d H:i:s'),
             ],
             [
-                'question_id' => 8,
+                'question_id' => 5,
                 'average_value' => null,
                 'min_value' => "2",
                 'max_value' => "10",
@@ -405,7 +405,7 @@ class AnswersTableSeeder extends Seeder
                 'created_at' => Carbon::now()->subDays(rand(1, 50))->format('Y-m-d H:i:s'),
             ],
             [
-                'question_id' => 8,
+                'question_id' => 5,
                 'average_value' => null,
                 'min_value' => "7",
                 'max_value' => "30",
@@ -417,7 +417,7 @@ class AnswersTableSeeder extends Seeder
                 'created_at' => Carbon::now()->subDays(rand(1, 50))->format('Y-m-d H:i:s'),
             ],
             [
-                'question_id' => 8,
+                'question_id' => 5,
                 'average_value' => null,
                 'min_value' => "2",
                 'max_value' => "4",
@@ -429,7 +429,7 @@ class AnswersTableSeeder extends Seeder
                 'created_at' => Carbon::now()->subDays(rand(1, 50))->format('Y-m-d H:i:s'),
             ],
             [
-                'question_id' => 8,
+                'question_id' => 5,
                 'average_value' => null,
                 'min_value' => "2",
                 'max_value' => "7",
@@ -441,7 +441,7 @@ class AnswersTableSeeder extends Seeder
                 'created_at' => Carbon::now()->subDays(rand(1, 50))->format('Y-m-d H:i:s'),
             ],
             [
-                'question_id' => 8,
+                'question_id' => 5,
                 'average_value' => null,
                 'min_value' => "2",
                 'max_value' => "7",
@@ -453,7 +453,7 @@ class AnswersTableSeeder extends Seeder
                 'created_at' => Carbon::now()->subDays(rand(1, 50))->format('Y-m-d H:i:s'),
             ],
             [
-                'question_id' => 8,
+                'question_id' => 5,
                 'average_value' => null,
                 'min_value' => "2",
                 'max_value' => "7",
@@ -465,7 +465,7 @@ class AnswersTableSeeder extends Seeder
                 'created_at' => Carbon::now()->subDays(rand(1, 50))->format('Y-m-d H:i:s'),
             ],
             [
-                'question_id' => 8,
+                'question_id' => 5,
                 'average_value' => null,
                 'min_value' => "2",
                 'max_value' => "7",
@@ -478,7 +478,7 @@ class AnswersTableSeeder extends Seeder
             ],
 
             [
-                'question_id' => 9,
+                'question_id' => 6,
                 'average_value' => null,
                 'min_value' => "4.5",
                 'max_value' => "5",
@@ -490,7 +490,7 @@ class AnswersTableSeeder extends Seeder
                 'created_at' => Carbon::now()->subDays(rand(1, 50))->format('Y-m-d H:i:s'),
             ],
             [
-                'question_id' => 9,
+                'question_id' => 6,
                 'average_value' => null,
                 'min_value' => "4.5",
                 'max_value' => "5",
@@ -502,7 +502,7 @@ class AnswersTableSeeder extends Seeder
                 'created_at' => Carbon::now()->subDays(rand(1, 50))->format('Y-m-d H:i:s'),
             ],
             [
-                'question_id' => 9,
+                'question_id' => 6,
                 'average_value' => null,
                 'min_value' => "4.5",
                 'max_value' => "5",
@@ -514,7 +514,7 @@ class AnswersTableSeeder extends Seeder
                 'created_at' => Carbon::now()->subDays(rand(1, 50))->format('Y-m-d H:i:s'),
             ],
             [
-                'question_id' => 9,
+                'question_id' => 6,
                 'average_value' => null,
                 'min_value' => "4.5",
                 'max_value' => "5",
@@ -526,7 +526,7 @@ class AnswersTableSeeder extends Seeder
                 'created_at' => Carbon::now()->subDays(rand(1, 50))->format('Y-m-d H:i:s'),
             ],
             [
-                'question_id' => 9,
+                'question_id' => 6,
                 'average_value' => null,
                 'min_value' => "4.5",
                 'max_value' => "5",
@@ -538,7 +538,7 @@ class AnswersTableSeeder extends Seeder
                 'created_at' => Carbon::now()->subDays(rand(1, 50))->format('Y-m-d H:i:s'),
             ],
             [
-                'question_id' => 9,
+                'question_id' => 6,
                 'average_value' => null,
                 'min_value' => "4.5",
                 'max_value' => "5",
@@ -550,7 +550,7 @@ class AnswersTableSeeder extends Seeder
                 'created_at' => Carbon::now()->subDays(rand(1, 50))->format('Y-m-d H:i:s'),
             ],
             [
-                'question_id' => 9,
+                'question_id' => 6,
                 'average_value' => null,
                 'min_value' => "5.5",
                 'max_value' => "6",
@@ -563,7 +563,7 @@ class AnswersTableSeeder extends Seeder
             ],
 
             [
-                'question_id' => 10,
+                'question_id' => 7,
                 'average_value' => null,
                 'min_value' => "20",
                 'max_value' => "25",
@@ -576,7 +576,7 @@ class AnswersTableSeeder extends Seeder
             ],
 
             [
-                'question_id' => 11,
+                'question_id' => 8,
                 'average_value' => "45",
                 'min_value' => null,
                 'max_value' => null,
@@ -589,7 +589,7 @@ class AnswersTableSeeder extends Seeder
             ],
 
             [
-                'question_id' => 12,
+                'question_id' => 9,
                 'average_value' => null,
                 'min_value' => "4",
                 'max_value' => "6",
@@ -601,7 +601,7 @@ class AnswersTableSeeder extends Seeder
                 'created_at' => Carbon::now()->subDays(rand(1, 50))->format('Y-m-d H:i:s'),
             ],
 
-            [
+            /*[
                 'question_id' => 13,
                 'average_value' => "450",
                 'min_value' => null,
@@ -644,9 +644,9 @@ class AnswersTableSeeder extends Seeder
                 'approved' => 1,
                 'discovered' => 1,
                 'selected' => 1,
-                'created_at' => Carbon::now()->subDays(rand(1, 50))->format('Y-m-d H:i:s'),],
+                'created_at' => Carbon::now()->subDays(rand(1, 50))->format('Y-m-d H:i:s'),],*/
 
-            [
+            /*[
                 'question_id' => 14,
                 'average_value' => "6",
                 'min_value' => null,
@@ -678,10 +678,10 @@ class AnswersTableSeeder extends Seeder
                 'approved' => 1,
                 'discovered' => 1,
                 'selected' => 1,
-                'created_at' => Carbon::now()->subDays(rand(1, 50))->format('Y-m-d H:i:s'),],
+                'created_at' => Carbon::now()->subDays(rand(1, 50))->format('Y-m-d H:i:s'),],*/
 
             [
-                'question_id' => 15,
+                'question_id' => 10,
                 'average_value' => null,
                 'min_value' => "6",
                 'max_value' => "10",
@@ -692,7 +692,7 @@ class AnswersTableSeeder extends Seeder
                 'selected' => 1,
                 'created_at' => Carbon::now()->subDays(rand(1, 50))->format('Y-m-d H:i:s'),],
             [
-                'question_id' => 15,
+                'question_id' => 10,
                 'average_value' => null,
                 'min_value' => "5",
                 'max_value' => "10",
@@ -704,7 +704,7 @@ class AnswersTableSeeder extends Seeder
                 'created_at' => Carbon::now()->subDays(rand(1, 50))->format('Y-m-d H:i:s'),],
 
             [
-                'question_id' => 16,
+                'question_id' => 11,
                 'average_value' => null,
                 'min_value' => "20",
                 'max_value' => "25",
@@ -715,7 +715,7 @@ class AnswersTableSeeder extends Seeder
                 'selected' => 1,
                 'created_at' => Carbon::now()->subDays(rand(1, 50))->format('Y-m-d H:i:s'),],
             [
-                'question_id' => 16,
+                'question_id' => 11,
                 'average_value' => null,
                 'min_value' => "20",
                 'max_value' => "25",
@@ -726,7 +726,7 @@ class AnswersTableSeeder extends Seeder
                 'selected' => 1,
                 'created_at' => Carbon::now()->subDays(rand(1, 50))->format('Y-m-d H:i:s'),],
             [
-                'question_id' => 16,
+                'question_id' => 11,
                 'average_value' => null,
                 'min_value' => "10",
                 'max_value' => "20",
@@ -738,7 +738,7 @@ class AnswersTableSeeder extends Seeder
                 'created_at' => Carbon::now()->subDays(rand(1, 50))->format('Y-m-d H:i:s'),],
 
             [
-                'question_id' => 17,
+                'question_id' => 12,
                 'average_value' => null,
                 'min_value' => "15",
                 'max_value' => "20",
@@ -749,7 +749,7 @@ class AnswersTableSeeder extends Seeder
                 'selected' => 1,
                 'created_at' => Carbon::now()->subDays(rand(1, 50))->format('Y-m-d H:i:s'),],
             [
-                'question_id' => 17,
+                'question_id' => 12,
                 'average_value' => null,
                 'min_value' => "12",
                 'max_value' => "24",
@@ -760,7 +760,7 @@ class AnswersTableSeeder extends Seeder
                 'selected' => 1,
                 'created_at' => Carbon::now()->subDays(rand(1, 50))->format('Y-m-d H:i:s'),],
 
-            [
+            /*[
                 'question_id' => 18,
                 'average_value' => null,
                 'min_value' => "2",
@@ -803,7 +803,7 @@ class AnswersTableSeeder extends Seeder
                 'approved' => 1,
                 'discovered' => 1,
                 'selected' => 1,
-                'created_at' => Carbon::now()->subDays(rand(1, 50))->format('Y-m-d H:i:s'),],
+                'created_at' => Carbon::now()->subDays(rand(1, 50))->format('Y-m-d H:i:s'),],*/
 
         ]);
 

@@ -36,7 +36,7 @@ class QuestionsTableSeeder extends Seeder
                     'approved' => true,
                     'aggregation' => 'range'
                 ],
-                [
+                /*[
                     'content' => 'let oil-based paint to dry',
                     'slug' => str_slug('let oil-based paint to dry', '-'),
                     'approved' => true,
@@ -53,7 +53,7 @@ class QuestionsTableSeeder extends Seeder
                     'slug' => str_slug('antibiotics to work', '-'),
                     'approved' => true,
                     'aggregation' => 'range'
-                ],
+                ],*/
                 [
                     'content' => 'get into ketosis',
                     'slug' => str_slug('get into ketosis', '-'),
@@ -84,7 +84,7 @@ class QuestionsTableSeeder extends Seeder
                     'approved' => true,
                     'aggregation' => 'range'
                 ],
-                [
+                /*[
                     'content' => 'plastic bottles to decompose',
                     'slug' => str_slug('plastic bottles to decompose', '-'),
                     'approved' => true,
@@ -95,7 +95,7 @@ class QuestionsTableSeeder extends Seeder
                     'slug' => str_slug('food poisoning to hit', '-'),
                     'approved' => true,
                     'aggregation' => 'average'
-                ],
+                ],*/
                 [
                     'content' => 'get pregnant',
                     'slug' => str_slug('get pregnant', '-'),
@@ -114,12 +114,12 @@ class QuestionsTableSeeder extends Seeder
                     'approved' => true,
                     'aggregation' => 'range'
                 ],
-                [
+                /*[
                     'content' => 'tattoo to heal',
                     'slug' => str_slug('tattoo to heal', '-'),
                     'approved' => true,
                     'aggregation' => 'range'
-                ],
+                ],*/
 
             ]);
 
