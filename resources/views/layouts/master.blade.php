@@ -5,6 +5,7 @@
         @include('layouts.partials.gtm-head')
         @include('layouts.partials.meta')
         <title>@yield('title','How long it takes')</title>
+        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/howlongittakes-favicon.png') }}">
         @include('layouts.partials.fonts')
         @include('layouts.partials.style')
         @include('layouts.partials.scripts')
