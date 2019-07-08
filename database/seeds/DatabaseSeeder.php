@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
          $this->call(QuestionsTableSeeder::class);
          $this->call(UnitsTableSeeder::class);
          $this->call(AnswersTableSeeder::class);
+         $this->call(UsersTableSeeder::class);
 
 //         factory(\App\Answer::class , 50)->create();
     }

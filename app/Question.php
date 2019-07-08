@@ -51,6 +51,7 @@ class Question extends Model
             'min'=>min($answers),
             'max'=>max($answers)
         ];
+
         $range=[
             'min'=>min($range['min']) + 0,
             'max'=>max($range['max']) + 0,
@@ -64,6 +65,11 @@ class Question extends Model
         $answers = [];
         $min_answers = [];
         $max_answers = [];
+        if(!count($this->answers))
+        {
+            return false;
+        }
+
         foreach ($this->answers as $answer){
             if(!$answer->isSelected)
             {
