@@ -10,8 +10,6 @@ html, body {
   margin: 0;
 }
 
-
-
 a, a:hover, a:active, a:focus
 {
   color:inherit;
@@ -20,4 +18,12 @@ a, a:hover, a:active, a:focus
 
 .row{
   margin: 1rem 0;
+}
+
+li.ais-pagination__item.ais-pagination__item--active {
+  a{
+    border-bottom: 2px solid black;
+    padding-bottom: 0.5rem;
+    font-weight: bold;
+  }
 }

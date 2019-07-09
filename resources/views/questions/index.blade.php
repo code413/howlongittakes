@@ -103,7 +103,7 @@
                     </template>
                 </ais-no-results>
 
-                <ais-pagination :padding="5"></ais-pagination>
+                <ais-pagination :padding="5" :total-pages="2" ></ais-pagination>
 
                 <ais-powered-by :class="{'text-center': 'power-by'}"></ais-powered-by>
 
