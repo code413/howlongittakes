@@ -14,26 +14,26 @@ class QuestionsTableSeeder extends Seeder
     {
             DB::table('questions')->insert([
                 [
-                    'content' => 'get to mars',
-                    'slug' => str_slug('get to mars', '-'),
+                    'content' => 'to get to mars',
+                    'slug' => str_slug('to get to mars', '-'),
                     'approved' => true,
                     'aggregation' => 'average'
                 ],
                 [
-                    'content' => 'digest food',
-                    'slug' => str_slug('digest food', '-'),
+                    'content' => 'to digest food',
+                    'slug' => str_slug('to digest food', '-'),
                     'approved' => true,
                     'aggregation' => 'range'
                 ],
                 [
-                    'content' => 'get to the moon',
-                    'slug' => str_slug('get to the moon', '-'),
+                    'content' => 'to get to the moon',
+                    'slug' => str_slug('to get to the moon', '-'),
                     'approved' => true,
                     'aggregation' => 'average'
                 ],
                 [
-                    'content' => 'boil eggs',
-                    'slug' => str_slug('boil eggs', '-'),
+                    'content' => 'to boil eggs',
+                    'slug' => str_slug('to boil eggs', '-'),
                     'approved' => true,
                     'aggregation' => 'range'
                 ],
@@ -56,32 +56,32 @@ class QuestionsTableSeeder extends Seeder
                     'aggregation' => 'range'
                 ],*/
                 [
-                    'content' => 'get into ketosis',
-                    'slug' => str_slug('get into ketosis', '-'),
+                    'content' => 'to get into ketosis',
+                    'slug' => str_slug('to get into ketosis', '-'),
                     'approved' => true,
                     'aggregation' => 'range'
                 ],
                 [
-                    'content' => 'cook a 25lb (pound) turkey',
-                    'slug' => str_slug('cook a 25lb (pound) turkey', '-'),
+                    'content' => 'to cook a 25lb (pound) turkey',
+                    'slug' => str_slug('to cook a 25lb (pound) turkey', '-'),
                     'approved' => true,
                     'aggregation' => 'range'
                 ],
                 [
-                    'content' => 'charge airpods',
-                    'slug' => str_slug('charge airpods', '-'),
+                    'content' => 'to charge airpods',
+                    'slug' => str_slug('to charge airpods', '-'),
                     'approved' => true,
                     'aggregation' => 'range'
                 ],
                 [
-                    'content' => 'charge a juul',
-                    'slug' => str_slug('charge a juul', '-'),
+                    'content' => 'to charge a juul',
+                    'slug' => str_slug('to charge a juul', '-'),
                     'approved' => true,
                     'aggregation' => 'average'
                 ],
                 [
-                    'content' => 'get waves',
-                    'slug' => str_slug('get waves', '-'),
+                    'content' => 'to get waves',
+                    'slug' => str_slug('to get waves', '-'),
                     'approved' => true,
                     'aggregation' => 'range'
                 ],
@@ -98,20 +98,20 @@ class QuestionsTableSeeder extends Seeder
                     'aggregation' => 'average'
                 ],*/
                 [
-                    'content' => 'get pregnant',
-                    'slug' => str_slug('get pregnant', '-'),
+                    'content' => 'to get pregnant',
+                    'slug' => str_slug('to get pregnant', '-'),
                     'approved' => true,
                     'aggregation' => 'range'
                 ],
                 [
-                    'content' => 'boil potatoes',
-                    'slug' => str_slug('boil potatoes', '-'),
+                    'content' => 'to boil potatoes',
+                    'slug' => str_slug('to boil potatoes', '-'),
                     'approved' => true,
                     'aggregation' => 'range'
                 ],
                 [
-                    'content' => 'walk a mile',
-                    'slug' => str_slug('walk a mile', '-'),
+                    'content' => 'to walk a mile',
+                    'slug' => str_slug('to walk a mile', '-'),
                     'approved' => true,
                     'aggregation' => 'range'
                 ],

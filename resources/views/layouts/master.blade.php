@@ -18,7 +18,7 @@
 @section('header')
 @show
 
-<main class="@yield('main.class')">
+<main class="@yield('main.class') pb-2">
     @section('content')
 
     @show

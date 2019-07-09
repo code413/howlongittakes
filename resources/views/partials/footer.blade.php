@@ -1,5 +1,5 @@
 
-<footer class="mt-5 p-2 p-sm-3 flex-column flex-grow align-items-center justify-content-center">
+<footer class="p-2 p-sm-3 flex-column flex-grow align-items-center justify-content-center">
         <div class="row">
             <div class="copyright col-12 col-md-6 text-left">
                 Copyright {{ date('Y') }} -

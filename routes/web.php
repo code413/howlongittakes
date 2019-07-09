@@ -13,7 +13,7 @@
 
 Route::get('/', 'QuestionsController@index');
 
-Route::resource('to', 'QuestionsController', ['only'=> [ 'show', 'store']]);
+Route::post('/submit', 'QuestionsController@store');
 
 Route::resource('answers', 'AnswersController', ['only'=> ['store', 'update']]);
 
@@ -25,4 +25,4 @@ Route::get('logout','Auth\LoginController@logout')->name('logout');
 
 Route::resource('feeds', 'FeedsController', ['only'=>['create', 'store']])->middleware('auth');
 
-
+Route::get('/{question}', 'QuestionsController@show');

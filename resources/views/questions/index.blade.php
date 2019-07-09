@@ -14,9 +14,9 @@
                     api-key="{{ env('ALGOLIA_SEARCH_KEY') }}"
                     index-name="questions"
             >
-                <div class="input-group mb-5 mt-0 row">
+                <div class="input-group mb-5 mt-0 row search-header">
                     <div class="input-group-prepend">
-                        <h1 class="input-group-text" id="basic-addon1">How long it takes to</h1>
+                        <h1 class="input-group-text" id="basic-addon1">How long it takes</h1>
                     </div>
                     <ais-input placeholder="..." v-on:query="updateValue" class="form-control" autofocus></ais-input>
 
@@ -29,11 +29,11 @@
                     <template slot-scope="{ result }">
 
                         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                            <a :href="/to/ + result.slug" class="question card card-question mb-3 mb-sm-5"
+                            <a :href="result.slug" class="question card card-question mb-3 mb-sm-5"
                                style="min-height: 15rem;">
                                 <div class="card-body d-flex flex-column">
                                     <h2>
-                                        <small class="d-block text-muted">How long it takes to</small>
+                                        <small class="d-block text-muted">How long it takes</small>
                                         @{{ result.content }}?
                                     </h2>
                                     <div class="mt-auto text-right">

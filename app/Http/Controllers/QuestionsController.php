@@ -19,14 +19,11 @@ class QuestionsController extends Controller
 
         }*/
 
-
         return view('questions.index', compact('questions'));
     }
 
-    public function show(Question $to)
+    public function show(Question $question)
     {
-        $question = $to;
-
         $units = Unit::all();
 
         return view('questions.show', compact('question', 'units'));

@@ -36,7 +36,7 @@
 
         @endif
 
-        to {{ $question->content }}.
+        {{ $question->content }}.
     </div>
 @else
     <div class="answer">

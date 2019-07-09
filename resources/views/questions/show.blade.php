@@ -6,7 +6,7 @@
     <header class="p-5">
         <ul class="nav">
             <li class="nav-item">
-                <a class="nav-link" href="/">Ask another
+                <a class="nav-link" href="/">< Ask another
                     question</a>
             </li>
         </ul>
@@ -18,7 +18,7 @@
          style="min-height:calc(100vh - 40rem); padding: 10rem 2rem ;">
         <div class="align-items-center justify-content-center">
             <h1>
-                How long it takes to {{$question->content}}?
+                How long it takes {{$question->content}}?
             </h1>
         </div>
 
@@ -82,7 +82,7 @@
                             </div>
                         @endif
 
-                        <small class="col-6 col-md-3 text-right text-muted">Added {{ $answer->created_at->diffForHumans() }}</small>
+                        <small class="col-6 col-md-3 text-right text-secondary">Added {{ $answer->created_at->diffForHumans() }}</small>
                     </div>
 
                 @endforeach

@@ -7,8 +7,6 @@ window.Vue = require('vue');
 
 Vue.use(InstantSearch);
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-
 
 
 window.onload = function () {
@@ -23,22 +21,14 @@ window.onload = function () {
             }
         }
     });
-}
+};
+
+window.App = {
+  init : function () {
+      require('./components/feed');
+  }
+};
 
 $(document).ready(function () {
-
-    let $feedAggregation = $('#feed-aggregation');
-    $feedAggregation.change(function () {
-
-        if($feedAggregation.val() === 'range'){
-            $('#range-answer').removeClass('d-none').find('input').removeAttr('disabled');
-            $('#average-answer').addClass('d-none').find('input').attr('disabled');
-        }else{
-            $('#average-answer').removeClass('d-none').find('input').removeAttr('disabled');
-            $('#range-answer').addClass('d-none').find('input').attr('disabled');
-
-        }
-
-    });
-
+    App.init();
 });
