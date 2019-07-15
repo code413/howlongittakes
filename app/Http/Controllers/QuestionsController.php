@@ -24,9 +24,9 @@ class QuestionsController extends Controller
 
         if ($question->isAnswered()) {
             if ($question->isAverage) {
-                $descriptionAnswer = 'How long it takes ' . $question->content . '? it takes on average ' . $question->averageAnswer() . ' ' . $question->answers()->selected()->first()->unit->name . '(s).';
+                $descriptionAnswer = 'It takes on average ' . $question->averageAnswer() . ' ' . $question->answers()->selected()->first()->unit->name . '(s).';
             } elseif ($question->isRange) {
-                $descriptionAnswer = 'How long it takes ' . $question->content . '? it takes between ' . $question->rangeAnswer()['min'] .
+                $descriptionAnswer = 'It takes between ' . $question->rangeAnswer()['min'] .
                     ' to ' . $question->rangeAnswer()['max'] . ' ' . $question->answers()->selected()->first()->unit->name . '(s).';
             }
         }
