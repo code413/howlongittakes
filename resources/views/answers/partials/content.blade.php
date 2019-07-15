@@ -1,4 +1,4 @@
-@if($question->answers()->selected()->count() > 0)
+@if($question->isAnswered())
 
     <div class="answer">
         According to

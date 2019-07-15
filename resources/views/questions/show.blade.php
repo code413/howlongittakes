@@ -1,5 +1,10 @@
 @extends('layouts.master')
 
+
+@section('title', 'How long it takes ' . $question->content . '?')
+@section('description', $descriptionAnswer)
+
+
 @section('main.class', 'flex-column flex-grow align-items-center justify-content-center question-show')
 
 @section('header')
@@ -82,7 +87,8 @@
                             </div>
                         @endif
 
-                        <small class="col-6 col-md-3 text-right text-secondary">Added {{ $answer->created_at->diffForHumans() }}</small>
+                        <small class="col-6 col-md-3 text-right text-secondary">
+                            Added {{ $answer->created_at->diffForHumans() }}</small>
                     </div>
 
                 @endforeach
@@ -119,7 +125,8 @@
                             </div>
                         @endif
 
-                        <small class="col-6 col-md-3 text-right text-muted">Added {{ $answer->created_at->diffForHumans() }}</small>
+                        <small class="col-6 col-md-3 text-right text-muted">
+                            Added {{ $answer->created_at->diffForHumans() }}</small>
                     </div>
                 @endforeach
             </div>

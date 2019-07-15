@@ -13,12 +13,6 @@ class QuestionsController extends Controller
 
     public function index()
     {
-        /*$questions = Question::all();
-        foreach ($questions as $question){
-            dd($question->answers());
-
-        }*/
-
         return view('questions.index', compact('questions'));
     }
 
@@ -26,7 +20,18 @@ class QuestionsController extends Controller
     {
         $units = Unit::all();
 
-        return view('questions.show', compact('question', 'units'));
+        $descriptionAnswer = 'How long it takes ' . $question->content . '?';
+
+        if ($question->isAnswered()) {
+            if ($question->isAverage) {
+                $descriptionAnswer = 'How long it takes ' . $question->content . '? it takes on average ' . $question->averageAnswer() . ' ' . $question->answers()->selected()->first()->unit->name . '(s).';
+            } elseif ($question->isRange) {
+                $descriptionAnswer = 'How long it takes ' . $question->content . '? it takes between ' . $question->rangeAnswer()['min'] .
+                    ' to ' . $question->rangeAnswer()['max'] . ' ' . $question->answers()->selected()->first()->unit->name . '(s).';
+            }
+        }
+
+        return view('questions.show', compact('question', 'units', 'descriptionAnswer'));
     }
 
     public function store(Request $request)
